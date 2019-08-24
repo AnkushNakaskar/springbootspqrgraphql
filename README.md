@@ -4,6 +4,7 @@
 * You can refer the Link for More detail points read :
     * https://pragmaticcoders.com/blog/how-to-use-graphql-in-spring-boot/ 
     * https://dimitr.im/graphql-spring-boot
+    * https://github.com/graphql-java/graphql-java-page/tree/master/content/documentation/v13
     
 * You can refer the input json (postman from SpringGraphQL project).
 * This project uses SPQR library just to automate the schema defination so that there should not be any miss match between resolver and query definations.
