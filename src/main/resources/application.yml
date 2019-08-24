@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: SpringGraphQL
+  jackson:
+    serialization-inclusion: NON_EMPTY
+project:
+  group: core
+  team: content
+  application: 'SpringGraphQL'

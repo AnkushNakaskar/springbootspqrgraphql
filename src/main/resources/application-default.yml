@@ -1,0 +1,41 @@
+spring:
+  sleuth:
+    enabled : false
+    sampler:
+      percentage: 1.0
+  zipkin:
+    baseUrl:  'http://test.google.com:9411'
+    enabled:  false
+  h2:
+    console:
+      enabled:  true
+  datasource:
+    url: 'jdbc:h2:mem:testdb'
+    username: sa
+    password: ''
+    driver-class-name: 'org.h2.Driver'
+  jpa:
+    show-sql: true
+    database-platform:  org.hibernate.dialect.H2Dialect
+server:
+  port: 8080
+feign:
+  httpclient:
+    enabled:  true
+    maxConnections: 600
+management:
+  security:
+    flag: false
+  health:
+    jms:
+      enabled: false
+    rabbit:
+      enabled: false
+
+graphql:
+  servlet:
+    mapping: /graphql
+    enabled: true
+    corsEnabled: true
+    exception-handlers-enabled: true
+    contextSetting: PER_REQUEST_WITH_INSTRUMENTATION

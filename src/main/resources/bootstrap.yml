@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: SpringGraphQL
+
+---
+spring:
+  profiles: ankush
+  cloud:
+    loadbalancer: 
+      retry:  true
+---
+spring:
+  profiles: test
+  cloud:
+    consul:
+      enabled: false    
+---
+spring:
+  profiles: staging
+  cloud:
+    consul:
+      enabled: false
+
+---
+
+spring:
+  profiles: default
