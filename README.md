@@ -6,6 +6,7 @@
     * https://dimitr.im/graphql-spring-boot
     * https://github.com/graphql-java/graphql-java-page/tree/master/content/documentation/v13
     * https://graphql.org/blog/subscriptions-in-graphql-and-relay/
+    * https://github.com/leangen/graphql-spqr-spring-boot-starter
     
 * You can refer the input json (postman from SpringGraphQL project).
 * This project uses SPQR library just to automate the schema defination so that there should not be any miss match between resolver and query definations.
