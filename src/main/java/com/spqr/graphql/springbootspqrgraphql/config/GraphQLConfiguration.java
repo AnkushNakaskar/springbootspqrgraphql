@@ -45,7 +45,7 @@ public class GraphQLConfiguration {
                 .queryExecutionStrategy(new BatchedExecutionStrategy())
                 .instrumentation(new ChainedInstrumentation(Arrays.asList(
                         new MaxQueryComplexityInstrumentation(200),
-                        new MaxQueryDepthInstrumentation(20),
+                        new MaxQueryDepthInstrumentation(20),//This instrumentation controll how much depth we have have in graphql query.
 //                        TracingInstrumentation.Options.newOptions().includeTrivialDataFetchers()
                         new TracingInstrumentation()
 
