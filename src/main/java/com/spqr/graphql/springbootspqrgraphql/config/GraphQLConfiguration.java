@@ -7,6 +7,7 @@ import graphql.analysis.MaxQueryComplexityInstrumentation;
 import graphql.analysis.MaxQueryDepthInstrumentation;
 import graphql.execution.batched.BatchedExecutionStrategy;
 import graphql.execution.instrumentation.ChainedInstrumentation;
+import graphql.execution.instrumentation.tracing.TracingInstrumentation;
 import graphql.schema.GraphQLSchema;
 import io.leangen.graphql.GraphQLSchemaGenerator;
 import io.leangen.graphql.metadata.strategy.query.AnnotatedResolverBuilder;
@@ -44,7 +45,10 @@ public class GraphQLConfiguration {
                 .queryExecutionStrategy(new BatchedExecutionStrategy())
                 .instrumentation(new ChainedInstrumentation(Arrays.asList(
                         new MaxQueryComplexityInstrumentation(200),
-                        new MaxQueryDepthInstrumentation(20)
+                        new MaxQueryDepthInstrumentation(20),
+//                        TracingInstrumentation.Options.newOptions().includeTrivialDataFetchers()
+                        new TracingInstrumentation()
+
                 )))
                 .build();
     }
